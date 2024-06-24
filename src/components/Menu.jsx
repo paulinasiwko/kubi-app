@@ -10,13 +10,13 @@ export default function Menu() {
                 <Navbar.Brand href="#">
                     <img src={logo} alt="Logo: KUBI - producent mebli" className="logo" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" className="me-4"/>
-                <Navbar.Collapse id="responsive-navbar-nav" className="menu-options">
-                    <Nav className="mr-auto">
-                        <Nav.Link href="#">Strona główna</Nav.Link>
-                        <Nav.Link href="#">Galeria</Nav.Link>
-                        <Nav.Link href="#">O firmie</Nav.Link>
-                        <Nav.Link href="#" className="contact">Kontakt</Nav.Link>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Collapse id="responsive-navbar-nav" className="collapse">
+                    <Nav className="m-auto">
+                        <Nav.Link href="#" className="mx-1">Strona główna</Nav.Link>
+                        <Nav.Link href="#" className="mx-1">Galeria</Nav.Link>
+                        <Nav.Link href="#" className="mx-1">O firmie</Nav.Link>
+                        <Nav.Link href="#" className="mx-1 contact">Kontakt</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
         </Navbar>
