@@ -1,0 +1,23 @@
+.menu {
+    background-color: var(--grey);
+    height: 50px;
+    text-transform: uppercase;
+    font-family: Nunito, sans-serif;
+    font-size: 13px;
+}
+
+.logo {
+    width: 80px;
+    margin-left: 20px;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    color: var(--green-dark);
+    font-weight: bold;
+}

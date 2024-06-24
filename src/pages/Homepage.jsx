@@ -1,8 +1,9 @@
-function Homepage() {
+import Menu from "../components/Menu.jsx";
+
+export default function Homepage() {
     return (
         <>
+            <Menu />
         </>
     )
 }
-
-export default Homepage;
