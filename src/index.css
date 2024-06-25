@@ -4,3 +4,9 @@
     --yellow-light: #FBE180;
     --green-dark: #016670;
 }
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
