@@ -10,7 +10,7 @@ export default function Menu() {
                 <Navbar.Brand href="#">
                     <img src={logo} alt="Logo: KUBI - producent mebli" className="logo" />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" className="custom-toggle" />
                 <Navbar.Collapse id="responsive-navbar-nav" className="collapse">
                     <Nav className="m-auto">
                         <Nav.Link href="#" className="mx-1">Strona główna</Nav.Link>
