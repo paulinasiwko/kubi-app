@@ -12,7 +12,7 @@ export default function Homepage() {
             <Container fluid className="p-0">
                 <Row className="g-0">
                     <Image src={backgroundImg} alt="Photo of a living room" className="backgroundImg" />
-                    <h5 className="text-center w-100">Poznaj sztukę wyrafinowanego meblarstwa</h5>
+                    <h5 className="homepageCard">Poznaj sztukę wyrafinowanego meblarstwa</h5>
                 </Row>
             </Container>
 
