@@ -25,6 +25,7 @@
 }
 
 #galleryGrid {
+    margin: 0px 5%;
     display: grid;
     grid-template-rows: 300px 300px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -35,20 +36,28 @@
 
 #wardrobe {
     grid-area: wardrobe;
+    background-image: url(../assets/img/background/wardrobe.jpg);
 }
 
 #rtv {
     grid-area: rtv;
+    background-image: url(../assets/img/background/room.jpg);
 }
 
 #bathroom {
     grid-area: bathroom;
+    background-image: url(../assets/img/background/bathroom.jpg);
 }
 
 #kitchen {
     grid-area: kitchen;
+    background-image: url(../assets/img/background/kitchen.jpg);
 }
 
 .galleryGridArea {
-    border: 2px solid red;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
 }
