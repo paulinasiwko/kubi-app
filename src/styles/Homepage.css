@@ -32,7 +32,8 @@
     grid-template-areas:
     "wardrobe rtv bathroom"
     "kitchen kitchen bathroom";
-    gap: 5px;
+    gap: 10px;
+    margin-bottom: 60px;
 }
 
 #wardrobe {
@@ -60,4 +61,18 @@
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.heading {
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    /*height: 25px;*/
+    color: white;
+    font-size: 18px;
+    border-bottom: 5px solid var(--yellow-light);
+    margin: 0;
+    width: 100%;
 }

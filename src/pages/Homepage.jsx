@@ -32,22 +32,21 @@ export default function Homepage() {
                         </p>
                     </div>
                 </Row>
-                <Row id="galleryGrid" className="text-center">
+                <Row id="galleryGrid" className="text-center g-0">
                     <Col id="wardrobe" className="galleryGridArea">
-                        <p>Szafy</p>
+                        <p className="heading">Szafy</p>
                     </Col>
                     <Col id="rtv" className="galleryGridArea">
-                        <p>RTV</p>
+                        <p className="heading">RTV</p>
                     </Col>
                     <Col id="bathroom" className="galleryGridArea">
-                        <p>Łazienki</p>
+                        <p className="heading">Łazienki</p>
                     </Col>
                     <Col id="kitchen" className="galleryGridArea">
-                        <p>Kuchnie</p>
+                        <p className="heading">Kuchnie</p>
                     </Col>
                 </Row>
             </Container>
-
         </>
     )
 }
