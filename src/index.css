@@ -1,3 +1,7 @@
+* {
+    font-family: Nunito, sans-serif;
+}
+
 :root {
     --grey: #F6F6F6;
     --grey-light: #F4F4F4;

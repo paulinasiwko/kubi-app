@@ -16,6 +16,25 @@ export default function Homepage() {
                         <h5 className="homepageCard">Poznaj sztukę wyrafinowanego meblarstwa</h5>
                     </div>
                 </Row>
+                <Row className="text-center m-5">
+                    <h3 className="mb-4 text-uppercase fw-semibold">Kategorie</h3>
+                    <div className="">
+                        <p>
+                            Każdy z naszych projektów powstaje z myślą o Tobie – Twoich potrzebach i marzeniach.
+                            Bez względu na to, czy szukasz idealnej kuchni, czy funkcjonalnych rozwiązań do biura
+                            – u nas znajdziesz to, czego potrzebujesz.
+                        </p>
+                        <p>
+                            Przeglądaj nasze kategorie produktów i znajdź inspirację do stworzenia wymarzonego wnętrza.
+                        </p>
+                        <p>
+                            Zaufaj nam, a my pomożemy Ci w realizacji Twojej wizji, dbając o każdy detal.
+                        </p>
+                    </div>
+                </Row>
+                <Row>
+
+                </Row>
             </Container>
 
         </>
