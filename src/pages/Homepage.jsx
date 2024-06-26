@@ -1,7 +1,7 @@
 import Menu from "../components/Menu.jsx";
 import '../styles/Homepage.css';
 import backgroundImg from "../assets/img/background/homepage2.jpg";
-import {Container, Image, Row} from "react-bootstrap";
+import {Col, Container, Image, Row} from "react-bootstrap";
 
 
 export default function Homepage() {
@@ -32,8 +32,19 @@ export default function Homepage() {
                         </p>
                     </div>
                 </Row>
-                <Row>
-
+                <Row id="galleryGrid" className="text-center">
+                    <div id="wardrobe" className="galleryGridArea">
+                        <p>Szafy</p>
+                    </div>
+                    <div id="rtv" className="galleryGridArea">
+                        <p>RTV</p>
+                    </div>
+                    <div id="bathroom" className="galleryGridArea">
+                        <p>Łazienki</p>
+                    </div>
+                    <div id="kitchen" className="galleryGridArea">
+                        <p>Kuchnie</p>
+                    </div>
                 </Row>
             </Container>
 

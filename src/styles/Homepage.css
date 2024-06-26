@@ -23,3 +23,32 @@
     white-space: nowrap;
     font-weight: bold;
 }
+
+#galleryGrid {
+    display: grid;
+    grid-template-rows: 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "wardrobe rtv bathroom"
+    "kitchen kitchen bathroom";
+}
+
+#wardrobe {
+    grid-area: wardrobe;
+}
+
+#rtv {
+    grid-area: rtv;
+}
+
+#bathroom {
+    grid-area: bathroom;
+}
+
+#kitchen {
+    grid-area: kitchen;
+}
+
+.galleryGridArea {
+    border: 2px solid red;
+}
