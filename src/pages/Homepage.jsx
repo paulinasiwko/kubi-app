@@ -33,18 +33,18 @@ export default function Homepage() {
                     </div>
                 </Row>
                 <Row id="galleryGrid" className="text-center">
-                    <div id="wardrobe" className="galleryGridArea">
+                    <Col id="wardrobe" className="galleryGridArea">
                         <p>Szafy</p>
-                    </div>
-                    <div id="rtv" className="galleryGridArea">
+                    </Col>
+                    <Col id="rtv" className="galleryGridArea">
                         <p>RTV</p>
-                    </div>
-                    <div id="bathroom" className="galleryGridArea">
+                    </Col>
+                    <Col id="bathroom" className="galleryGridArea">
                         <p>Łazienki</p>
-                    </div>
-                    <div id="kitchen" className="galleryGridArea">
+                    </Col>
+                    <Col id="kitchen" className="galleryGridArea">
                         <p>Kuchnie</p>
-                    </div>
+                    </Col>
                 </Row>
             </Container>
 
