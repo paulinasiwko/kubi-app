@@ -5,11 +5,16 @@
     display: block;
 }
 
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .homepageCard {
     position: absolute;
     top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 30%;
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 25px;
