@@ -40,3 +40,7 @@
 .nav {
     padding-right: 10%;
 }
+
+.menuItem:hover {
+    font-weight: bold;
+}

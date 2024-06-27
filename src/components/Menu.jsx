@@ -13,9 +13,9 @@ export default function Menu() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" className="custom-toggle" />
                 <Navbar.Collapse id="responsive-navbar-nav" className="collapse">
                     <Nav className="m-auto nav">
-                        <Nav.Link href="#">Strona główna</Nav.Link>
-                        <Nav.Link href="#">Galeria</Nav.Link>
-                        <Nav.Link href="#">O firmie</Nav.Link>
+                        <Nav.Link href="#" className="menuItem">Strona główna</Nav.Link>
+                        <Nav.Link href="#" className="menuItem">Galeria</Nav.Link>
+                        <Nav.Link href="#" className="menuItem">O firmie</Nav.Link>
                         <Nav.Link href="#" className="contact">Kontakt</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
