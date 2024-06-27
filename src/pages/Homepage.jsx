@@ -1,8 +1,9 @@
 import Menu from "../components/Menu.jsx";
 import '../styles/Homepage.css';
 import backgroundImg from "../assets/img/background/homepage2.jpg";
-import {Col, Container, Image, Row} from "react-bootstrap";
+import { Container, Image, Row} from "react-bootstrap";
 import Footer from "../components/Footer.jsx";
+import GalleryGrid from "../components/GalleryGrid.jsx";
 
 
 export default function Homepage() {
@@ -33,20 +34,7 @@ export default function Homepage() {
                         </p>
                     </div>
                 </Row>
-                <Row id="galleryGrid" className="text-center g-0">
-                    <Col id="wardrobe" className="galleryGridArea">
-                        <p className="heading">Szafy i garderoby</p>
-                    </Col>
-                    <Col id="rtv" className="galleryGridArea">
-                        <p className="heading">Meble pokojowe i RTV</p>
-                    </Col>
-                    <Col id="bathroom" className="galleryGridArea">
-                        <p className="heading">Łazienki</p>
-                    </Col>
-                    <Col id="kitchen" className="galleryGridArea">
-                        <p className="heading">Kuchnie</p>
-                    </Col>
-                </Row>
+                <GalleryGrid />
             </Container>
             <Footer />
         </>

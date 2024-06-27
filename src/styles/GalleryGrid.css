@@ -1,0 +1,63 @@
+#galleryGrid {
+    margin: 0px 5%;
+    display: grid;
+    grid-template-rows: 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "wardrobe rtv bathroom"
+    "kitchen kitchen bathroom";
+    gap: 10px;
+    margin-bottom: 60px;
+}
+
+#wardrobe {
+    grid-area: wardrobe;
+    background-image: url(../assets/img/background/wardrobe.jpg);
+}
+
+#rtv {
+    grid-area: rtv;
+    background-image: url(../assets/img/background/room.jpg);
+}
+
+#bathroom {
+    grid-area: bathroom;
+    background-image: url(../assets/img/background/bathroom.jpg);
+}
+
+#kitchen {
+    grid-area: kitchen;
+    background-image: url(../assets/img/background/kitchen.jpg);
+}
+
+.galleryGridArea {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    #galleryGrid {
+        grid-template-rows: 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "wardrobe"
+        "rtv"
+        "bathroom"
+        "kitchen";
+    }
+}
+
+.heading {
+    background-color: rgba(0,0,0,0.7);
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    border-bottom: 5px solid var(--yellow-light);
+    margin: 0;
+    width: 100%;
+}
