@@ -10,12 +10,12 @@
 }
 
 .imgLeft {
-    height: 50vh;
+    height: 60vh;
     border-radius: 0 20px 20px 0;
 }
 
 .imgRight {
-    height: 50vh;
+    height: 60vh;
     border-radius: 20px 0 0 20px;
 }
 
@@ -32,4 +32,19 @@
     align-items: center;
     justify-content: center;
     background-color: var(--grey-light);
+}
+
+.contactBtn {
+    text-transform: uppercase;
+    background-color: var(--green-dark);
+    width: auto;
+    display: inline-block;
+    margin: 10px auto;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.contactBtn:hover {
+    background-color: var(--green-light);
+    border: 0;
 }

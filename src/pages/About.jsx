@@ -1,4 +1,4 @@
-import {Container, Image, Row, Col } from "react-bootstrap";
+import {Container, Image, Row, Col, Button} from "react-bootstrap";
 import about1 from "../assets/img/background/about-1.jpg";
 import about2 from "../assets/img/background/about-2.jpg";
 import about3 from "../assets/img/background/about-3.jpg";
@@ -57,6 +57,16 @@ export default function About() {
                         oferując rozwiązania, które łączą w sobie nowoczesny design z funkcjonalnością.
                     </p>
                 </Col>
+            </Row>
+            <Row className="text-center m-5 px-lg-5 d-flex justify-content-center align-items-center">
+                <h5 className="fw-semibold mb-4">Skontaktuj się z Nami!</h5>
+                <p>
+                    Jesteście zainteresowani? Skontaktujcie się z nami!
+                    Z przyjemnością odpowiemy na wszelkie pytania, udzielimy
+                    fachowych porad i rozwiejemy wszelkie wątpliwości.
+                    Nasza firma istnieje, aby realizować Wasze wizje idealnych wnętrz.
+                </p>
+                <Button className="contactBtn">Kontakt</Button>
             </Row>
         </Container>
     )
