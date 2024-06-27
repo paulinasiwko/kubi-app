@@ -35,3 +35,7 @@
     background-color: var(--grey);
     margin-left: 20px;
 }
+
+.nav {
+    padding-right: 10%;
+}

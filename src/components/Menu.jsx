@@ -12,11 +12,11 @@ export default function Menu() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" className="custom-toggle" />
                 <Navbar.Collapse id="responsive-navbar-nav" className="collapse">
-                    <Nav className="m-auto">
-                        <Nav.Link href="#" className="mx-1">Strona główna</Nav.Link>
-                        <Nav.Link href="#" className="mx-1">Galeria</Nav.Link>
-                        <Nav.Link href="#" className="mx-1">O firmie</Nav.Link>
-                        <Nav.Link href="#" className="mx-1 contact">Kontakt</Nav.Link>
+                    <Nav className="m-auto nav">
+                        <Nav.Link href="#">Strona główna</Nav.Link>
+                        <Nav.Link href="#">Galeria</Nav.Link>
+                        <Nav.Link href="#">O firmie</Nav.Link>
+                        <Nav.Link href="#" className="contact">Kontakt</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
         </Navbar>
