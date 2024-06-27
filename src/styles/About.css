@@ -9,21 +9,6 @@
     height: 70vh;
 }
 
-.imgLeft {
-    height: 60vh;
-    border-radius: 0 20px 20px 0;
-}
-
-.imgRight {
-    height: 60vh;
-    border-radius: 20px 0 0 20px;
-}
-
-.imgRightSm {
-    display: flex;
-    justify-content: end;
-}
-
 .aboutIntro {
     position: absolute;
     top: 15%;
@@ -57,6 +42,21 @@
         font-size: 0.875rem;
         padding: 0.5rem;
     }
+}
+
+.imgLeft {
+    height: 60vh;
+    border-radius: 0 20px 20px 0;
+}
+
+.imgRight {
+    height: 60vh;
+    border-radius: 20px 0 0 20px;
+}
+
+.imgRightSm {
+    display: flex;
+    justify-content: end;
 }
 
 .greyRow {
@@ -96,7 +96,7 @@
     background-color: var(--green-dark);
     width: auto;
     display: inline-block;
-    margin: 10px auto;
+    margin: 40px auto;
     border-radius: 0;
     font-weight: bold;
 }
