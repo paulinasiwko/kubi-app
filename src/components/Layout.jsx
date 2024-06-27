@@ -1,7 +1,8 @@
 import Menu from "./Menu.jsx";
 import Footer from "./Footer.jsx";
 
-export default function Layout(page) {
+// eslint-disable-next-line react/prop-types
+export default function Layout({ page }) {
     return (
         <>
             <Menu />
