@@ -7,10 +7,11 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import Layout from "./pages/Layout.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import Gallery from "./pages/Gallery.jsx";
+import About from "./pages/About.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <Layout page={<Gallery />} />
+      <Layout page={<About />} />
   </React.StrictMode>,
 )
 

@@ -1,0 +1,35 @@
+.aboutImg {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imgMain {
+    height: 70vh;
+}
+
+.imgLeft {
+    height: 50vh;
+    border-radius: 0 20px 20px 0;
+}
+
+.imgRight {
+    height: 50vh;
+    border-radius: 20px 0 0 20px;
+}
+
+.aboutIntro {
+    position: absolute;
+    top: 15%;
+    margin-left: 15%;
+    white-space: wrap;
+    width: 20%;
+}
+
+.greyRow {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-light);
+}
