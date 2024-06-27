@@ -2,6 +2,7 @@ import Menu from "../components/Menu.jsx";
 import '../styles/Homepage.css';
 import backgroundImg from "../assets/img/background/homepage2.jpg";
 import {Col, Container, Image, Row} from "react-bootstrap";
+import Footer from "../components/Footer.jsx";
 
 
 export default function Homepage() {
@@ -47,6 +48,7 @@ export default function Homepage() {
                     </Col>
                 </Row>
             </Container>
+            <Footer />
         </>
     )
 }
