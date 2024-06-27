@@ -1,5 +1,5 @@
-import Menu from "./Menu.jsx";
-import Footer from "./Footer.jsx";
+import Menu from "../components/Menu.jsx";
+import Footer from "../components/Footer.jsx";
 
 // eslint-disable-next-line react/prop-types
 export default function Layout({ page }) {
