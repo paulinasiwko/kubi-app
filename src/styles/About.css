@@ -25,13 +25,44 @@
     margin-left: 15%;
     white-space: wrap;
     width: 20%;
+    text-align: center;
+}
+
+.aboutIntro h5 {
+    font-size: 1.5rem;
+}
+
+.aboutIntro p {
+    font-size: 1rem;
+}
+
+@media (max-width: 730px) {
+    .aboutIntro {
+        width: 40%;
+        margin-left: 5%;
+        top: 20%;
+    }
+
+    .aboutIntro h5 {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .aboutIntro p {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
 }
 
 .greyRow {
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--grey-light);
+}
+
+.bold {
+    color: var(--green-dark);
 }
 
 .contactBtn {
