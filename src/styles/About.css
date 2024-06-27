@@ -19,6 +19,11 @@
     border-radius: 20px 0 0 20px;
 }
 
+.imgRightSm {
+    display: flex;
+    justify-content: end;
+}
+
 .aboutIntro {
     position: absolute;
     top: 15%;
@@ -59,6 +64,27 @@
     align-items: center;
     justify-content: center;
     background-color: var(--grey-light);
+}
+
+@media (max-width: 767px) {
+    .greyRow {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .greyRow h5 {
+        margin-top: 1.5rem;
+    }
+
+    .text {
+        margin: 1rem 0;
+    }
+
+    .imgLeft, .imgRight {
+        height: auto;
+        width: 90%;
+        margin: 20px 0;
+    }
 }
 
 .bold {

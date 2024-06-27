@@ -31,7 +31,7 @@ export default function About() {
                 </p>
             </Row>
             <Row className="greyRow">
-                <Col xs={12} md={6} className="px-5">
+                <Col xs={12} md={6} className="px-5 text">
                     <h5 className="fw-semibold mb-4">Doświadczenie i Zaufanie Klientów</h5>
                     <p>
                         Nasze doświadczenie oraz zaangażowanie pozwoliły nam zdobyć zaufanie <b className="bold">setek zadowolonych klientów</b>.
@@ -39,7 +39,7 @@ export default function About() {
                         Naszą pracę wykonujemy solidnie, z najwyższą starannością, co przekłada się na trwałość i jakość naszych produktów.
                     </p>
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={6} className="imgRightSm">
                     <Image src={about2} alt="Photo of a minimalistic living room with coutch and plants." className="aboutImg imgRight"/>
                 </Col>
             </Row>
@@ -47,8 +47,8 @@ export default function About() {
                 <Col xs={12} md={6}>
                     <Image src={about3} alt="Photo of a minimalistic living room with coutch and plants." className="aboutImg imgLeft"/>
                 </Col>
-                <Col xs={12} md={6} className="px-5">
-                    <h5 className="fw-semibold mb-4">Najwyższa Jakość Materiałów i Wykonania</h5>
+                <Col xs={12} md={6} className="px-5 text">
+                    <h5 className="fw-semibold my-4">Najwyższa Jakość Materiałów i Wykonania</h5>
                     <p>
                         Do produkcji naszych mebli używamy wyłącznie materiałów oraz akcesoriów meblowych <b className="bold">najwyższej jakości</b>.
                         Wkładamy dużo pracy i serca w każdy etap realizacji, od projektu, przez dobór materiałów, aż po finalny
