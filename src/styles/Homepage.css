@@ -66,6 +66,18 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 600px) {
+    #galleryGrid {
+        grid-template-rows: 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "wardrobe"
+        "rtv"
+        "bathroom"
+        "kitchen";
+    }
+}
+
 .heading {
     background-color: rgba(0,0,0,0.7);
     padding: 15px;
