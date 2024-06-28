@@ -1,5 +1,6 @@
-import {Button, Carousel, Container, Row} from "react-bootstrap";
+import {Button, Carousel, Container, Row, Col} from "react-bootstrap";
 import {useState} from "react";
+import '../styles/SingleGallery.css';
 
 // eslint-disable-next-line react/prop-types
 export default function SingleGallery({ title, description }) {
@@ -29,16 +30,26 @@ export default function SingleGallery({ title, description }) {
                     </p>
                 </div>
             </Row>
-            <Row>
-                <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false}>
-                    {Array.from({ length: totalImages }).map((_, i) => (
-                        <Carousel.Item key={i}>
-                            <img className="d-block w-100" src={`/kitchen/${i}.jpg`} alt={`Slajd ${i} - zdjęcie realizacji kuchni`} />
-                        </Carousel.Item>
-                    ))}
-                </Carousel>
-                <Button variant="primary" onClick={handleNext}>Następne</Button>
-                <Button variant="primary" onClick={handlePrev}>Poprzednie</Button>
+            <Row className="d-flex flex-row justify-content-center align-items-center mb-5 text-center">
+                <Col>
+                    <Button className="carouselBtn" onClick={handlePrev}>
+                        <i className="bi bi-arrow-left"></i>
+                    </Button>
+                </Col>
+                <Col>
+                    <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false}>
+                        {Array.from({ length: totalImages }).map((_, i) => (
+                            <Carousel.Item key={i} className="d-flex justify-content-center align-items-center">
+                                <img className="bigGallery" src={`/kitchen/${i}.jpg`} alt={`Slajd ${i} - zdjęcie realizacji kuchni`} />
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </Col>
+                <Col>
+                    <Button className="carouselBtn" onClick={handleNext}>
+                        <i className="bi bi-arrow-right"></i>
+                    </Button>
+                </Col>
             </Row>
         </Container>
     )

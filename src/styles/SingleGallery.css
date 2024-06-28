@@ -1,0 +1,21 @@
+.bigGallery {
+    height: 80vh;
+    width: auto;
+    border: 2px solid var(--yellow-light);
+    border-bottom: 6px solid var(--yellow-light);
+}
+
+.carouselBtn {
+    height: 20vh;
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    font-size: 30px;
+}
+
+.carouselBtn:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: var(--green-dark);
+    font-size: 35px;
+}
