@@ -24,7 +24,7 @@ export default function SingleGallery({ title, description }) {
         <Container fluid>
             <Row className="text-center m-5 px-lg-5">
                 <h3 className="mb-4 text-uppercase fw-semibold">{title}</h3>
-                <div className="m-auto">
+                <div className="m-auto px-lg-5">
                     <p>
                         {description}
                     </p>
