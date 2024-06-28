@@ -1,10 +1,22 @@
-import {Carousel, Container, Row} from "react-bootstrap";
+import {Button, Carousel, Container, Row} from "react-bootstrap";
 import {useState} from "react";
 
 // eslint-disable-next-line react/prop-types
 export default function SingleGallery({ title, description }) {
 
     const [kitchenImg, setKitchenImg] = useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+        setKitchenImg(selectedIndex);
+    };
+
+    const handlePrev = () => {
+        setKitchenImg((prevIndex) => (prevIndex === 0 ? 70 - 1 : prevIndex - 1));
+    };
+
+    const handleNext = () => {
+        setKitchenImg((prevIndex) => (prevIndex === 70 - 1 ? 0 : prevIndex + 1));
+    };
 
     return (
         <Container fluid>
@@ -17,21 +29,13 @@ export default function SingleGallery({ title, description }) {
                 </div>
             </Row>
             <Row>
-                <Carousel fade>
+                <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false}>
                     <Carousel.Item key={kitchenImg}>
-                        <img className="d-block w-100" src={`/kitchen/${kitchenImg}.jpg`} alt={`Slide ${kitchenImg}`} />
+                        <img className="d-block w-100" src={`/kitchen/${kitchenImg}.jpg`} alt={`Slajd ${kitchenImg} - zdjęcie realizacji kuchni`} />
                     </Carousel.Item>
                 </Carousel>
-
-
-                {/*<Carousel fade>*/}
-                {/*    /!* eslint-disable-next-line react/prop-types *!/*/}
-                {/*    {images.map((image, index) => (*/}
-                {/*        <Carousel.Item key={index}>*/}
-                {/*            <img className="d-block w-100" src={image.src} alt={`Slide ${index}`} />*/}
-                {/*        </Carousel.Item>*/}
-                {/*    ))}*/}
-                {/*</Carousel>*/}
+                <Button variant="primary" onClick={handleNext}>Następne</Button>
+                <Button variant="primary" onClick={handlePrev}>Poprzednie</Button>
             </Row>
         </Container>
     )
