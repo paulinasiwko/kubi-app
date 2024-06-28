@@ -40,13 +40,40 @@ export default function SingleGallery({ title, description }) {
                     <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false}>
                         {Array.from({ length: totalImages }).map((_, i) => (
                             <Carousel.Item key={i} className="d-flex justify-content-center align-items-center">
-                                <img className="bigGallery" src={`/img/kitchen/${i}.jpg`} alt={`Slajd ${i} - zdjęcie realizacji kuchni`} />
+                                <div className="gallery bigGallery" style={{backgroundImage: `url(/img/kitchen/${i}.jpg)`}}></div>
                             </Carousel.Item>
                         ))}
                     </Carousel>
                 </Col>
                 <Col>
-                    <Button className="carouselBtn" onClick={handleNext}>
+                <Button className="carouselBtn" onClick={handleNext}>
+                        <i className="bi bi-arrow-right"></i>
+                    </Button>
+                </Col>
+            </Row>
+            <Row className="d-flex justify-content-center align-content-center text-center mb-5 pt-4">
+                <Col>
+                    <Button className="carouselBtn">
+                        <i className="bi bi-arrow-left"></i>
+                    </Button>
+                </Col>
+                <Col>
+                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
+                </Col>
+                <Col>
+                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
+                </Col>
+                <Col>
+                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
+                </Col>
+                <Col>
+                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
+                </Col>
+                <Col>
+                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
+                </Col>
+                <Col>
+                    <Button className="carouselBtn">
                         <i className="bi bi-arrow-right"></i>
                     </Button>
                 </Col>
