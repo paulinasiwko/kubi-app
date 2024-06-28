@@ -1,5 +1,4 @@
 import '../styles/Homepage.css';
-import backgroundImg from "../assets/img/background/homepage2.jpg";
 import { Container, Image, Row} from "react-bootstrap";
 import GalleryGrid from "../components/GalleryGrid.jsx";
 
@@ -9,7 +8,7 @@ export default function Homepage() {
     return (
         <Container fluid className="p-0">
             <Row className="g-0">
-                <Image src={backgroundImg} alt="Photo of a living room" className="backgroundImg" />
+                <Image src="/img/background/homepage2.jpg" alt="Photo of a living room" className="backgroundImg" />
                 <div className="cardContainer">
                     <h5 className="homepageCard">Poznaj sztukę wyrafinowanego meblarstwa</h5>
                 </div>

@@ -12,22 +12,22 @@
 
 #wardrobe {
     grid-area: wardrobe;
-    background-image: url(../assets/img/background/wardrobe.jpg);
+    background-image: url(/img/background/wardrobe.jpg);
 }
 
 #rtv {
     grid-area: rtv;
-    background-image: url(../assets/img/background/room.jpg);
+    background-image: url(/img/background/room.jpg);
 }
 
 #bathroom {
     grid-area: bathroom;
-    background-image: url(../assets/img/background/bathroom.jpg);
+    background-image: url(/img/background/bathroom.jpg);
 }
 
 #kitchen {
     grid-area: kitchen;
-    background-image: url(../assets/img/background/kitchen.jpg);
+    background-image: url(/img/background/kitchen.jpg);
 }
 
 .galleryGridArea {

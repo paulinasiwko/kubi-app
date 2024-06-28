@@ -1,14 +1,11 @@
 import {Container, Image, Row, Col, Button} from "react-bootstrap";
-import about1 from "../assets/img/background/about-1.jpg";
-import about2 from "../assets/img/background/about-2.jpg";
-import about3 from "../assets/img/background/about-3.jpg";
 import '../styles/About.css';
 
 export default function About() {
     return (
         <Container fluid className="p-0">
             <Row className="g-0">
-                <Image src={about1} alt="Photo of a minimalistic home office in light tones" className="aboutImg imgMain"/>
+                <Image src="/img/background/about-1.jpg" alt="Photo of a minimalistic home office in light tones" className="aboutImg imgMain"/>
                 <div className="aboutIntro">
                     <h5 className="fw-semibold pt-md-4 pb-md-3">Kim Jesteśmy?</h5>
                     <p>
@@ -40,12 +37,12 @@ export default function About() {
                     </p>
                 </Col>
                 <Col xs={12} md={6} className="imgRightSm">
-                    <Image src={about2} alt="Photo of a minimalistic living room with coutch and plants." className="aboutImg imgRight"/>
+                    <Image src="/img/background/about-2.jpg" alt="Photo of a minimalistic living room with coutch and plants." className="aboutImg imgRight"/>
                 </Col>
             </Row>
             <Row className="greyRow">
                 <Col xs={12} md={6}>
-                    <Image src={about3} alt="Photo of a minimalistic living room with coutch and plants." className="aboutImg imgLeft"/>
+                    <Image src="/img/background/about-3.jpg" alt="Photo of a minimalistic living room with coutch and plants." className="aboutImg imgLeft"/>
                 </Col>
                 <Col xs={12} md={6} className="px-5 text">
                     <h5 className="fw-semibold my-4">Najwyższa Jakość Materiałów i Wykonania</h5>

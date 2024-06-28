@@ -40,7 +40,7 @@ export default function SingleGallery({ title, description }) {
                     <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false}>
                         {Array.from({ length: totalImages }).map((_, i) => (
                             <Carousel.Item key={i} className="d-flex justify-content-center align-items-center">
-                                <img className="bigGallery" src={`/kitchen/${i}.jpg`} alt={`Slajd ${i} - zdjęcie realizacji kuchni`} />
+                                <img className="bigGallery" src={`/img/kitchen/${i}.jpg`} alt={`Slajd ${i} - zdjęcie realizacji kuchni`} />
                             </Carousel.Item>
                         ))}
                     </Carousel>
