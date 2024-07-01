@@ -1,27 +1,27 @@
 import {Button, Carousel, Container, Row, Col} from "react-bootstrap";
-import { useState} from "react";
+import { useState } from "react";
 import '../styles/SingleGallery.css';
 
 // eslint-disable-next-line react/prop-types
-export default function SingleGallery({ title, description }) {
-    const [kitchenImg, setKitchenImg] = useState(0);
+export default function SingleGallery({ title, description, folderName }) {
+    const [bigGalleryImage, setBigGalleryImage] = useState(0);
     const [smallGalleryStartIndex, setSmallGalleryStartIndex] = useState(0);
     const totalImages = 70;
 
     const handleSelect = (selectedIndex) => {
-        setKitchenImg(selectedIndex);
+        setBigGalleryImage(selectedIndex);
         setSmallGalleryStartIndex(selectedIndex);
     };
 
     const handlePrev = () => {
-        const newIndex = kitchenImg === 0 ? totalImages - 1 : kitchenImg - 1;
-        setKitchenImg(newIndex);
+        const newIndex = bigGalleryImage === 0 ? totalImages - 1 : bigGalleryImage - 1;
+        setBigGalleryImage(newIndex);
         setSmallGalleryStartIndex(newIndex);
     };
 
     const handleNext = () => {
-        const newIndex = kitchenImg === totalImages - 1 ? 0 : kitchenImg + 1;
-        setKitchenImg(newIndex);
+        const newIndex = bigGalleryImage === totalImages - 1 ? 0 : bigGalleryImage + 1;
+        setBigGalleryImage(newIndex);
         setSmallGalleryStartIndex(newIndex);
     };
 
@@ -35,11 +35,11 @@ export default function SingleGallery({ title, description }) {
 
     const getSmallGalleryImage = (offset) => {
         const index = (smallGalleryStartIndex + offset) % totalImages;
-        return `/img/kitchen/${index}.jpg`;
+        return `/img/${folderName}/${index}.jpg`;
     };
 
     const handleSmallImageClick = (index) => {
-        setKitchenImg(index);
+        setBigGalleryImage(index);
     }
 
     return (
@@ -57,10 +57,10 @@ export default function SingleGallery({ title, description }) {
                     </Button>
                 </Col>
                 <Col>
-                    <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false} interval={null}>
+                    <Carousel fade activeIndex={bigGalleryImage} onSelect={handleSelect} controls={false} indicators={false} interval={null}>
                         {Array.from({ length: totalImages }).map((_, i) => (
                             <Carousel.Item key={i} className="d-flex justify-content-center align-items-center">
-                                <div className="gallery bigGallery" style={{ backgroundImage: `url(/img/kitchen/${i}.jpg)` }}></div>
+                                <div className="gallery bigGallery" style={{ backgroundImage: `url(/img/${folderName}/${i}.jpg)` }}></div>
                             </Carousel.Item>
                         ))}
                     </Carousel>
