@@ -38,6 +38,10 @@ export default function SingleGallery({ title, description }) {
         return `/img/kitchen/${index}.jpg`;
     };
 
+    const handleSmallImageClick = (index) => {
+        setKitchenImg(index);
+    }
+
     return (
         <Container fluid>
             <Row className="text-center m-5 px-lg-5">
@@ -75,7 +79,7 @@ export default function SingleGallery({ title, description }) {
                 </Col>
                 {[0, 1, 2, 3, 4].map((offset) => (
                     <Col key={offset}>
-                        <div className="gallery smallGallery" style={{ backgroundImage: `url(${getSmallGalleryImage(offset)})` }}></div>
+                        <div className="gallery smallGallery" style={{ backgroundImage: `url(${getSmallGalleryImage(offset)})`}} onClick={() => handleSmallImageClick((smallGalleryStartIndex + offset))}></div>
                     </Col>
                 ))}
                 <Col>
