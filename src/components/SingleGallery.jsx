@@ -1,5 +1,5 @@
 import {Button, Carousel, Container, Row, Col} from "react-bootstrap";
-import {useState} from "react";
+import { useState} from "react";
 import '../styles/SingleGallery.css';
 
 // eslint-disable-next-line react/prop-types
@@ -8,7 +8,7 @@ export default function SingleGallery({ title, description }) {
     const [kitchenImg, setKitchenImg] = useState(0);
     const totalImages = 70;
 
-    const handleSelect = (selectedIndex, e) => {
+    const handleSelect = (selectedIndex) => {
         setKitchenImg(selectedIndex);
     };
 
@@ -19,6 +19,11 @@ export default function SingleGallery({ title, description }) {
     const handleNext = () => {
         setKitchenImg((prevIndex) => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
     };
+
+    const getSmallGalleryImage = (offset) => {
+        const index = (kitchenImg + offset);
+        return `/img/kitchen/${index}.jpg`;
+    }
 
     return (
         <Container fluid>
@@ -57,21 +62,28 @@ export default function SingleGallery({ title, description }) {
                         <i className="bi bi-arrow-left"></i>
                     </Button>
                 </Col>
-                <Col>
-                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
-                </Col>
-                <Col>
-                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
-                </Col>
-                <Col>
-                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
-                </Col>
-                <Col>
-                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
-                </Col>
-                <Col>
-                    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
-                </Col>
+                {[0, 1, 2, 3, 4].map((offset) => (
+                    <Col key={offset}>
+                        <div className="gallery smallGallery" style={{ backgroundImage: `url(${getSmallGalleryImage(offset)})`}}></div>
+                    </Col>
+                ))}
+
+
+                {/*<Col>*/}
+                {/*    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>*/}
+                {/*</Col>*/}
+                {/*<Col>*/}
+                {/*    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>*/}
+                {/*</Col>*/}
+                {/*<Col>*/}
+                {/*    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>*/}
+                {/*</Col>*/}
+                {/*<Col>*/}
+                {/*    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>*/}
+                {/*</Col>*/}
+                {/*<Col>*/}
+                {/*    <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>*/}
+                {/*</Col>*/}
                 <Col>
                     <Button className="carouselBtn small">
                         <i className="bi bi-arrow-right"></i>
