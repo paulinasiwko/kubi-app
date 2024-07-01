@@ -42,7 +42,7 @@ export default function SingleGallery({ title, description }) {
                     </Button>
                 </Col>
                 <Col>
-                    <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false}>
+                    <Carousel fade activeIndex={kitchenImg} onSelect={handleSelect} controls={false} indicators={false} interval={null}>
                         {Array.from({ length: totalImages }).map((_, i) => (
                             <Carousel.Item key={i} className="d-flex justify-content-center align-items-center">
                                 <div className="gallery bigGallery" style={{backgroundImage: `url(/img/kitchen/${i}.jpg)`}}></div>
