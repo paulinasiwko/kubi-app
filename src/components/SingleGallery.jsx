@@ -53,7 +53,7 @@ export default function SingleGallery({ title, description }) {
             </Row>
             <Row className="d-flex justify-content-center align-content-center text-center mb-5 pt-4">
                 <Col>
-                    <Button className="carouselBtn">
+                    <Button className="carouselBtn small">
                         <i className="bi bi-arrow-left"></i>
                     </Button>
                 </Col>
@@ -73,7 +73,7 @@ export default function SingleGallery({ title, description }) {
                     <div className="gallery smallGallery" style={{ backgroundImage: `url(/img/kitchen/${kitchenImg}.jpg)` }}></div>
                 </Col>
                 <Col>
-                    <Button className="carouselBtn">
+                    <Button className="carouselBtn small">
                         <i className="bi bi-arrow-right"></i>
                     </Button>
                 </Col>

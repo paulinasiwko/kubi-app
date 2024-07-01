@@ -30,3 +30,7 @@
     color: var(--green-dark);
     font-size: 35px;
 }
+
+.small {
+    font-size: 20px;
+}
