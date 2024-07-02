@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <Container fluid className="p-0">
             <Row className="g-0 contactBackground">
-                <Col>
+                <Col className="m-auto d-flex align-items-center justify-content-end pe-5">
                     <Form className="form">
 
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -28,12 +28,14 @@ export default function Contact() {
 
                 </Col>
 
-                <Col>
-                    <h5 className="fw-bold">KUBI - Producent Mebli</h5>
-                    <p>Meble na wymiar Jakub Podufalski</p>
-                    <p>82-335 Jegłownik, ul. Jasna 6</p>
-                    <p>NIP: 5783140291 <br /> REGON: 385226970</p>
-                    <p>Tel: (+48) 502-472-763 <br /> E-mail: kubimeble@icloud.com</p>
+                <Col className="m-auto d-flex align-items-center justify-content-start ps-5">
+                    <div>
+                        <h5 className="fw-bold">KUBI - Producent Mebli</h5>
+                        <p>Meble na wymiar Jakub Podufalski</p>
+                        <p>82-335 Jegłownik, ul. Jasna 6</p>
+                        <p>NIP: 5783140291 <br/> REGON: 385226970</p>
+                        <p>Tel: (+48) 502-472-763 <br/> E-mail: kubimeble@icloud.com</p>
+                    </div>
                 </Col>
             </Row>
         </Container>
