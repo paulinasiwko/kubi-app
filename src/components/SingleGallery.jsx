@@ -1,5 +1,6 @@
 import {Button, Carousel, Container, Row, Col} from "react-bootstrap";
 import { useState } from "react";
+import { useMediaQuery } from 'react-responsive';
 import '../styles/SingleGallery.css';
 
 // eslint-disable-next-line react/prop-types
@@ -7,6 +8,8 @@ export default function SingleGallery({ title, description, folderName }) {
     const [bigGalleryImage, setBigGalleryImage] = useState(0);
     const [smallGalleryStartIndex, setSmallGalleryStartIndex] = useState(0);
     const totalImages = 70;
+    const isSmallScreen = useMediaQuery({maxWidth: 768});
+    const smallGalleryImages = isSmallScreen ? [0, 1, 2, 3] : [0, 1, 2, 3, 4];
 
     const handleSelect = (selectedIndex) => {
         setBigGalleryImage(selectedIndex);
@@ -77,8 +80,8 @@ export default function SingleGallery({ title, description, folderName }) {
                         <i className="bi bi-arrow-left"></i>
                     </Button>
                 </Col>
-                {[0, 1, 2, 3, 4].map((offset) => (
-                    <Col xs={2} md={2} key={offset}>
+                {smallGalleryImages.map((offset) => (
+                    <Col xs={2} md={2} key={offset} className="g-0">
                         <div className="gallery smallGallery" style={{ backgroundImage: `url(${getSmallGalleryImage(offset)})`}} onClick={() => handleSmallImageClick((smallGalleryStartIndex + offset))}></div>
                     </Col>
                 ))}
