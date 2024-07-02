@@ -51,12 +51,12 @@ export default function SingleGallery({ title, description, folderName }) {
                 </div>
             </Row>
             <Row className="d-flex flex-row justify-content-center align-items-center mb-5 text-center">
-                <Col>
+                <Col xs={2} md={1}>
                     <Button className="carouselBtn" onClick={handlePrev}>
                         <i className="bi bi-arrow-left"></i>
                     </Button>
                 </Col>
-                <Col>
+                <Col xs={8} md={10}>
                     <Carousel fade activeIndex={bigGalleryImage} onSelect={handleSelect} controls={false} indicators={false} interval={null}>
                         {Array.from({ length: totalImages }).map((_, i) => (
                             <Carousel.Item key={i} className="d-flex justify-content-center align-items-center">
@@ -65,24 +65,24 @@ export default function SingleGallery({ title, description, folderName }) {
                         ))}
                     </Carousel>
                 </Col>
-                <Col>
+                <Col xs={2} md={1}>
                     <Button className="carouselBtn" onClick={handleNext}>
                         <i className="bi bi-arrow-right"></i>
                     </Button>
                 </Col>
             </Row>
             <Row className="d-flex justify-content-center align-content-center text-center mb-5 pt-4">
-                <Col>
+                <Col xs={2} md={1}>
                     <Button className="carouselBtn small" onClick={handleSmallPrev}>
                         <i className="bi bi-arrow-left"></i>
                     </Button>
                 </Col>
                 {[0, 1, 2, 3, 4].map((offset) => (
-                    <Col key={offset}>
+                    <Col xs={2} md={2} key={offset}>
                         <div className="gallery smallGallery" style={{ backgroundImage: `url(${getSmallGalleryImage(offset)})`}} onClick={() => handleSmallImageClick((smallGalleryStartIndex + offset))}></div>
                     </Col>
                 ))}
-                <Col>
+                <Col xs={2} md={1}>
                     <Button className="carouselBtn small" onClick={handleSmallNext}>
                         <i className="bi bi-arrow-right"></i>
                     </Button>
