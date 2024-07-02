@@ -4,13 +4,14 @@
     width: 100%;
     padding-top: 10px;
     margin: 0;
+    font-size: 12px;
 }
 
 .footerRow {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     text-align: center;
     width: 100%;
 }
@@ -24,4 +25,14 @@
 .facebook {
     font-size: 26px;
     color: white;
+}
+
+@media (max-width: 576px) {
+    .footer {
+        font-size: 10px;
+    }
+
+    .footerCol {
+        margin-bottom: 10px;
+    }
 }
