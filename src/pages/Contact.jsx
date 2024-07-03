@@ -60,7 +60,7 @@ export default function Contact() {
 
                     </Col>
 
-                    <Col className="d-flex flex-column align-items-center justify-content-center contactInfoContainer">
+                    <Col className="mx-lg-5 d-flex flex-column align-items-center justify-content-center contactInfoContainer">
                         <Row>
                             <h5 className="fw-bold">KUBI - Producent Mebli</h5>
                             <p>Meble na wymiar Jakub Podufalski</p>
