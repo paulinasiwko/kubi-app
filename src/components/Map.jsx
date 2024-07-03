@@ -6,6 +6,7 @@ import '../styles/Map.css';
 const position = [54.12222, 19.30422];
 
 export default function Map() {
+
     return (
         <MapContainer className="map"
                       center={position}
