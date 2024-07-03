@@ -1,7 +1,15 @@
-import {Col, Container, Form, Row, Button} from "react-bootstrap";
+import {Col, Container, Form, Row, Button, Alert} from "react-bootstrap";
+import { useState } from "react";
 import '../styles/Contact.css';
 
 export default function Contact() {
+    const [show, setShow] = useState(true);
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [message, setMessage] = useState("");
+
+    const re = /^[0-9\b]+$/;
+
     return (
         <Container fluid className="p-0">
             <Row className="g-0 contactBackground">
@@ -10,20 +18,36 @@ export default function Contact() {
 
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Napisz do Nas!</Form.Label>
-                            <Form.Control type="email" placeholder="Email*" className="formControl" />
+                            <Form.Control value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email*" className="formControl" required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPhone">
-                            <Form.Control type="number" placeholder="Nr telefonu (opcjonalnie)" className="formControl" />
+                            <Form.Control value={phoneNumber}
+                                          onChange={(e) => {
+                                            if (e.target.value === "" || re.test(e.target.value)) {
+                                                setPhoneNumber(e.target.value);
+                                            }
+                            }}
+                                          type="number" placeholder="Nr telefonu (opcjonalnie)" className="formControl" />
                         </Form.Group>
 
                         <Form.Group className="mb-3 position-relative" controlId="formBasicText">
-                            <Form.Control as="textarea" placeholder="Treść wiadomości*" className="formControl textArea" />
+                            <Form.Control value={message} onChange={(e) => setMessage(e.target.value)} as="textarea" placeholder="Treść wiadomości*" className="formControl textArea" required />
                         </Form.Group>
 
-                        <Button type="submit" className="formBtn">
-                            WYŚLIJ
-                        </Button>
+                        {show ? (
+                            <Button type="submit" className="formBtn" onClick={() => {
+                                if (email && message) {
+                                    setShow(false);
+                                }
+                            }}>
+                                WYŚLIJ
+                            </Button>
+                        ) : (
+                            <Alert variant="success" onClose={() => setShow(true)} dismissible>
+                                <p>Wysłano!</p>
+                            </Alert>
+                        )}
                     </Form>
 
                 </Col>
