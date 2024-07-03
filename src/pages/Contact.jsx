@@ -2,6 +2,7 @@ import {Col, Container, Form, Row, Button, Alert} from "react-bootstrap";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
+import Map from "../components/Map.jsx";
 
 export default function Contact() {
     const [show, setShow] = useState(true);
@@ -59,14 +60,17 @@ export default function Contact() {
 
                 </Col>
 
-                <Col className="m-auto d-flex align-items-center justify-content-start ps-5">
-                    <div>
+                <Col className="m-auto d-flex align-items-center justify-content-center">
+                    <Row>
                         <h5 className="fw-bold">KUBI - Producent Mebli</h5>
                         <p>Meble na wymiar Jakub Podufalski</p>
                         <p>82-335 Jegłownik, ul. Jasna 6</p>
                         <p>NIP: 5783140291 <br/> REGON: 385226970</p>
                         <p>Tel: (+48) 502-472-763 <br/> E-mail: kubimeble@icloud.com</p>
-                    </div>
+                    </Row>
+                    <Row>
+                        <Map />
+                    </Row>
                 </Col>
             </Row>
         </Container>
