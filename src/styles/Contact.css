@@ -20,29 +20,6 @@
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-.form {
-    font-weight: bold;
-    font-size: 18px;
-    width: 70%;
-}
-
-.formControl {
-    font-size: 12px;
-    width: 100%;
-    margin: auto;
-}
-
-.textArea {
-    height: 18vh;
-}
-
-.formBtn {
-    background-color: var(--green-dark);
-    color: white;
-    border: 1px solid var(--green-dark);
-    font-weight: normal;
-}
-
 .contactInfoContainer {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
@@ -61,15 +38,6 @@
 
     .lighter {
         height: 60vh;
-    }
-
-    .formLabel {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .formControl {
-        font-size: 14px;
     }
 
     .contactInfoContainer {

@@ -1,0 +1,33 @@
+.form {
+    font-weight: bold;
+    font-size: 18px;
+    width: 70%;
+}
+
+.formControl {
+    font-size: 12px;
+    width: 100%;
+    margin: auto;
+}
+
+.textArea {
+    height: 18vh;
+}
+
+.formBtn {
+    background-color: var(--green-dark);
+    color: white;
+    border: 1px solid var(--green-dark);
+    font-weight: normal;
+}
+
+@media (max-width: 767px) {
+    .formLabel {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .formControl {
+        font-size: 14px;
+    }
+}
