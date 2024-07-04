@@ -1,14 +1,39 @@
-import {Col, Container, Form, Row, Button, Alert} from "react-bootstrap";
+import {Col, Container, Form, Row, Button, Alert, Modal } from "react-bootstrap";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 import Map from "../components/Map.jsx";
+
+function MapModal(props) {
+    return (
+        <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    Jesteśmy tutaj!
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Map />
+            </Modal.Body>
+            <Modal.Footer>
+                {/* eslint-disable-next-line react/prop-types */}
+                <Button onClick={props.onHide}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+    );
+}
 
 export default function Contact() {
     const [show, setShow] = useState(true);
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [message, setMessage] = useState("");
+    const [modalShow,setModalShow] = useState(false);
 
     const re = /^[0-9\b]+$/;
 
@@ -72,11 +97,13 @@ export default function Contact() {
                             <Col>
                                 <h5 className="mapText">Jesteśmy tutaj!</h5>
                             </Col>
-                            <Col>
+                            <Col onClick={() => setModalShow(true)}>
                                 <Map />
                             </Col>
                         </Row>
                     </Col>
+
+                    <MapModal show={modalShow} onHide={() => setModalShow(false)} />
                 </Row>
             </Container>
             )
