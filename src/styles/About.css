@@ -102,9 +102,10 @@
     margin: 40px auto;
     border-radius: 0;
     font-weight: bold;
+    border: 1px solid var(--green-dark);
 }
 
 .contactBtn:hover {
     background-color: var(--green-light);
-    border: 0;
+    border: 1px solid var(--green-light);
 }
