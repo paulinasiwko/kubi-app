@@ -13,9 +13,9 @@
     position: absolute;
     top: 15%;
     margin-left: 15%;
-    white-space: wrap;
     width: 20%;
     text-align: center;
+    white-space: wrap;
 }
 
 .aboutIntro h5 {
@@ -44,13 +44,16 @@
     }
 }
 
-.imgLeft {
+.imgLeft,
+.imgRight {
     height: 60vh;
+}
+
+.imgLeft {
     border-radius: 0 20px 20px 0;
 }
 
 .imgRight {
-    height: 60vh;
     border-radius: 20px 0 0 20px;
 }
 
