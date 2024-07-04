@@ -1,6 +1,7 @@
 import {Col, Container, Row } from "react-bootstrap";
 import { useState } from "react";
 import '../styles/Contact.css';
+import 'leaflet/dist/leaflet.css';
 import Map from "../components/Map.jsx";
 import MapModal from "../components/MapModal.jsx";
 import ContactForm from "../components/ContactForm.jsx";

@@ -1,5 +1,6 @@
 import {Button, Modal} from "react-bootstrap";
 import Map from "./Map.jsx";
+import 'leaflet/dist/leaflet.css';
 
 export default function MapModal(props) {
     return (
