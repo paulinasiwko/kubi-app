@@ -34,7 +34,6 @@ export default function Contact() {
                             </Row>
                         </Col>
                         <MapModal show={modalShow} onHide={() => setModalShow(false)} />
-
                     </Container>
                 </Row>
             </Container>

@@ -4,6 +4,7 @@
     border-radius: 50%;
     border: 2px solid var(--yellow-light);
     cursor: pointer;
+    margin: auto;
 }
 
 .mapBig {
