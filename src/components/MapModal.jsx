@@ -1,5 +1,4 @@
 import {Button, Modal} from "react-bootstrap";
-import '../styles/MapModal.css';
 import Map from "./Map.jsx";
 
 export default function MapModal(props) {
@@ -15,7 +14,7 @@ export default function MapModal(props) {
             </Modal.Body>
             <Modal.Footer>
                 {/* eslint-disable-next-line react/prop-types */}
-                <Button onClick={props.onHide} className="modalBtn">Zamknij</Button>
+                <Button onClick={props.onHide} style={{backgroundColor: "var(--green-dark)"}}>Zamknij</Button>
             </Modal.Footer>
         </Modal>
     );

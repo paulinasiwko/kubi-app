@@ -5,6 +5,7 @@ import '../styles/Map.css';
 
 const position = [54.12222, 19.30422];
 
+// eslint-disable-next-line react/prop-types
 export default function Map({ className }) {
 
     return (
