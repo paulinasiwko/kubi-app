@@ -10,6 +10,11 @@
     margin-bottom: 60px;
 }
 
+.gridItem {
+    display: contents;
+    text-decoration: none;
+}
+
 #wardrobe {
     grid-area: wardrobe;
     background-image: url(/img/background/wardrobe.jpg);
