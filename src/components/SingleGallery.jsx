@@ -4,10 +4,9 @@ import { useMediaQuery } from 'react-responsive';
 import '../styles/SingleGallery.css';
 
 // eslint-disable-next-line react/prop-types
-export default function SingleGallery({ title, description, folderName }) {
+export default function SingleGallery({ title, description, folderName, total }) {
     const [bigGalleryImage, setBigGalleryImage] = useState(0);
     const [smallGalleryStartIndex, setSmallGalleryStartIndex] = useState(0);
-    const totalImages = 70;
     const isSmallScreen = useMediaQuery({maxWidth: 768});
     const smallGalleryImages = isSmallScreen ? [0, 1, 2, 3] : [0, 1, 2, 3, 4];
 
@@ -17,27 +16,27 @@ export default function SingleGallery({ title, description, folderName }) {
     };
 
     const handlePrev = () => {
-        const newIndex = bigGalleryImage === 0 ? totalImages - 1 : bigGalleryImage - 1;
+        const newIndex = bigGalleryImage === 0 ? total - 1 : bigGalleryImage - 1;
         setBigGalleryImage(newIndex);
         setSmallGalleryStartIndex(newIndex);
     };
 
     const handleNext = () => {
-        const newIndex = bigGalleryImage === totalImages - 1 ? 0 : bigGalleryImage + 1;
+        const newIndex = bigGalleryImage === total - 1 ? 0 : bigGalleryImage + 1;
         setBigGalleryImage(newIndex);
         setSmallGalleryStartIndex(newIndex);
     };
 
     const handleSmallPrev = () => {
-        setSmallGalleryStartIndex((prevIndex) => (prevIndex === 0 ? totalImages - 1 : prevIndex - 1));
+        setSmallGalleryStartIndex((prevIndex) => (prevIndex === 0 ? total - 1 : prevIndex - 1));
     };
 
     const handleSmallNext = () => {
-        setSmallGalleryStartIndex((prevIndex) => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
+        setSmallGalleryStartIndex((prevIndex) => (prevIndex === total - 1 ? 0 : prevIndex + 1));
     };
 
     const getSmallGalleryImage = (offset) => {
-        const index = (smallGalleryStartIndex + offset) % totalImages;
+        const index = (smallGalleryStartIndex + offset) % total;
         return `/img/${folderName}/${index}.jpg`;
     };
 
@@ -61,7 +60,7 @@ export default function SingleGallery({ title, description, folderName }) {
                 </Col>
                 <Col xs={8} md={10}>
                     <Carousel fade activeIndex={bigGalleryImage} onSelect={handleSelect} controls={false} indicators={false} interval={null}>
-                        {Array.from({ length: totalImages }).map((_, i) => (
+                        {Array.from({ length: total }).map((_, i) => (
                             <Carousel.Item key={i} className="d-flex justify-content-center align-items-center">
                                 <div className="gallery bigGallery" style={{ backgroundImage: `url(/img/${folderName}/${i}.jpg)` }}></div>
                             </Carousel.Item>
