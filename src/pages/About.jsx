@@ -1,5 +1,6 @@
 import {Container, Image, Row, Col, Button} from "react-bootstrap";
 import '../styles/About.css';
+import { Link } from "react-router-dom";
 
 export default function About() {
     return (
@@ -73,7 +74,7 @@ export default function About() {
                     <p>
                         Nasza firma istnieje, aby realizować Wasze wizje idealnych wnętrz.
                     </p>
-                    <Button className="contactBtn">Kontakt</Button>
+                    <Button as={Link} to={"/contact"} className="contactBtn">Kontakt</Button>
                 </Col>
             </Row>
         </Container>

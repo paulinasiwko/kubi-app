@@ -31,7 +31,7 @@ export default function Homepage() {
                     </div>
                 </Col>
             </Row>
-            <GalleryGrid/>
+            <GalleryGrid />
         </Container>
     )
 }
