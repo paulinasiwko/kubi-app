@@ -16,6 +16,7 @@ import SingleGallery from "./components/SingleGallery.jsx";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+      {/*<Layout page={<Homepage />} />*/}
       <Layout page={<Contact />} />
       {/*<Layout page={<SingleGallery title="Kuchnie"*/}
       {/*                             description="Zobacz, jak tworzymy kuchnie na wymiar, które doskonale łączą praktyczność z elegancją. Nasze realizacje odzwierciedlają różnorodne style i potrzeby naszych klientów. Przekonaj się, jak możemy przekształcić Twoją kuchnię w serce domu, gdzie każdy detal ma znaczenie."*/}

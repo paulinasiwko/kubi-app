@@ -5,10 +5,10 @@ import '../styles/Map.css';
 
 const position = [54.12222, 19.30422];
 
-export default function Map() {
+export default function Map({ className }) {
 
     return (
-        <MapContainer className="map"
+        <MapContainer className={className}
                       center={position}
                       zoom={15}
                       scrollWheelZoom={false}>

@@ -1,6 +1,13 @@
-.map {
+.mapSmall {
     height: 30vh;
     width: 30vh;
     border-radius: 50%;
     border: 2px solid var(--yellow-light);
+    cursor: pointer;
+}
+
+.mapBig {
+    border-radius: 0px;
+    width: 100%;
+    height: 70vh;
 }

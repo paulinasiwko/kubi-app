@@ -2,18 +2,33 @@
     background-image: url(/img/background/about-2.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
+}
+
+.whiteBackground {
+    height: 85vh;
+    text-align: center;
+    margin: auto;
+}
+
+.lighter {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.darker {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .form {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
+    width: 70%;
 }
 
 .formControl {
     font-size: 12px;
-    width: 60vh;
+    width: 100%;
     margin: auto;
 }
 
@@ -30,10 +45,8 @@
 
 .contactInfoContainer {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 30px 0;
+    padding: 20px;
     border-radius: 20px;
-    display: inline-block;
-    max-width: 100%;
     text-align: center;
     margin: auto;
 }
@@ -41,4 +54,39 @@
 .mapText {
     color: var(--green-dark);
     font-weight: bold;
+}
+
+
+@media (max-width: 767px) {
+
+    .lighter {
+        height: 60vh;
+    }
+
+    .formLabel {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .formControl {
+        font-size: 14px;
+    }
+
+    .contactInfoContainer {
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .contactInfo {
+        margin-top: 20px;
+    }
+
+    .mapRow {
+        margin-bottom: 20px;
+    }
+
+    .mapSmall {
+        height: 200px;
+    }
 }
